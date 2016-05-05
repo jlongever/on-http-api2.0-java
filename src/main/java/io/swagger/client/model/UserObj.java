@@ -2,6 +2,7 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-24T14:01:25.311-04:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
 public class UserObj   {
   
   private String username = null;
@@ -19,12 +20,8 @@ public class UserObj   {
   
   /**
    **/
-  public UserObj username(String username) {
-    this.username = username;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("username")
   public String getUsername() {
     return username;
@@ -36,12 +33,8 @@ public class UserObj   {
   
   /**
    **/
-  public UserObj password(String password) {
-    this.password = password;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("password")
   public String getPassword() {
     return password;
@@ -53,12 +46,8 @@ public class UserObj   {
   
   /**
    **/
-  public UserObj role(String role) {
-    this.role = role;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("role")
   public String getRole() {
     return role;
@@ -70,7 +59,7 @@ public class UserObj   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -78,9 +67,9 @@ public class UserObj   {
       return false;
     }
     UserObj userObj = (UserObj) o;
-    return Objects.equals(this.username, userObj.username) &&
-        Objects.equals(this.password, userObj.password) &&
-        Objects.equals(this.role, userObj.role);
+    return Objects.equals(username, userObj.username) &&
+        Objects.equals(password, userObj.password) &&
+        Objects.equals(role, userObj.role);
   }
 
   @Override
@@ -104,7 +93,7 @@ public class UserObj   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
