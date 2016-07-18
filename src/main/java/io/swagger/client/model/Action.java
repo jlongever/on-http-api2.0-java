@@ -1,49 +1,48 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import com.google.gson.annotations.SerializedName;
+
 
 
 
 /**
  * Action object
  **/
-
 @ApiModel(description = "Action object")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
 public class Action   {
   
 
+public enum CommandEnum {
+  @SerializedName(""cancel"")
+  CANCEL(""cancel"");
 
-  public enum CommandEnum {
-    CANCEL("cancel");
+  private String value;
 
-    private String value;
-
-    CommandEnum(String value) {
-      this.value = value;
-    }
-
-    @Override
-    @JsonValue
-    public String toString() {
-      return value;
-    }
+  CommandEnum(String value) {
+    this.value = value;
   }
 
+  @Override
+  public String toString() {
+    return value;
+  }
+}
+
+  @SerializedName("command")
   private CommandEnum command = null;
+
+  @SerializedName("options")
   private Object options = null;
 
-  
   /**
    * Command to execute
    **/
-  
   @ApiModelProperty(required = true, value = "Command to execute")
-  @JsonProperty("command")
   public CommandEnum getCommand() {
     return command;
   }
@@ -51,13 +50,10 @@ public class Action   {
     this.command = command;
   }
 
-  
   /**
    * Command options object
    **/
-  
   @ApiModelProperty(value = "Command options object")
-  @JsonProperty("options")
   public Object getOptions() {
     return options;
   }
@@ -65,7 +61,6 @@ public class Action   {
     this.options = options;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -107,4 +102,3 @@ public class Action   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

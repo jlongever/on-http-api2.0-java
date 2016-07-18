@@ -1,37 +1,50 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Catalog;
 import io.swagger.client.model.Graphobject;
 import io.swagger.client.model.Sku;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class Node   {
   
+  @SerializedName("id")
   private String id = null;
+
+  @SerializedName("profile")
   private String profile = null;
+
+  @SerializedName("name")
   private String name = null;
+
+  @SerializedName("obmSettings")
   private Object obmSettings = null;
+
+  @SerializedName("ipAddresses")
   private Object ipAddresses = null;
+
+  @SerializedName("workflows")
   private List<Graphobject> workflows = new ArrayList<Graphobject>();
+
+  @SerializedName("catalogs")
   private List<Catalog> catalogs = new ArrayList<Catalog>();
+
+  @SerializedName("sku")
   private Sku sku = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("id")
   public String getId() {
     return id;
   }
@@ -39,12 +52,9 @@ public class Node   {
     this.id = id;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty("profile")
   public String getProfile() {
     return profile;
   }
@@ -52,12 +62,9 @@ public class Node   {
     this.profile = profile;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty("name")
   public String getName() {
     return name;
   }
@@ -65,12 +72,9 @@ public class Node   {
     this.name = name;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("obmSettings")
   public Object getObmSettings() {
     return obmSettings;
   }
@@ -78,12 +82,9 @@ public class Node   {
     this.obmSettings = obmSettings;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("ipAddresses")
   public Object getIpAddresses() {
     return ipAddresses;
   }
@@ -91,12 +92,9 @@ public class Node   {
     this.ipAddresses = ipAddresses;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("workflows")
   public List<Graphobject> getWorkflows() {
     return workflows;
   }
@@ -104,12 +102,9 @@ public class Node   {
     this.workflows = workflows;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("catalogs")
   public List<Catalog> getCatalogs() {
     return catalogs;
   }
@@ -117,12 +112,9 @@ public class Node   {
     this.catalogs = catalogs;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("sku")
   public Sku getSku() {
     return sku;
   }
@@ -130,7 +122,6 @@ public class Node   {
     this.sku = sku;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -184,4 +175,3 @@ public class Node   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

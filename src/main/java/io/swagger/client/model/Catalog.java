@@ -1,30 +1,34 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Node;
 
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class Catalog   {
   
+  @SerializedName("id")
   private String id = null;
+
+  @SerializedName("source")
   private String source = null;
+
+  @SerializedName("node")
   private Node node = null;
+
+  @SerializedName("data")
   private Object data = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty("id")
   public String getId() {
     return id;
   }
@@ -32,12 +36,9 @@ public class Catalog   {
     this.id = id;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty("source")
   public String getSource() {
     return source;
   }
@@ -45,12 +46,9 @@ public class Catalog   {
     this.source = source;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty("node")
   public Node getNode() {
     return node;
   }
@@ -58,13 +56,10 @@ public class Catalog   {
     this.node = node;
   }
 
-  
   /**
    * arbitrary json object
    **/
-  
   @ApiModelProperty(value = "arbitrary json object")
-  @JsonProperty("data")
   public Object getData() {
     return data;
   }
@@ -72,7 +67,6 @@ public class Catalog   {
     this.data = data;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -118,4 +112,3 @@ public class Catalog   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

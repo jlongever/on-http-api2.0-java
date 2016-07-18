@@ -1,28 +1,30 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class Error   {
   
+  @SerializedName("code")
   private Integer code = null;
+
+  @SerializedName("message")
   private String message = null;
+
+  @SerializedName("fields")
   private String fields = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("code")
   public Integer getCode() {
     return code;
   }
@@ -30,12 +32,9 @@ public class Error   {
     this.code = code;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("message")
   public String getMessage() {
     return message;
   }
@@ -43,12 +42,9 @@ public class Error   {
     this.message = message;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("fields")
   public String getFields() {
     return fields;
   }
@@ -56,7 +52,6 @@ public class Error   {
     this.fields = fields;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -100,4 +95,3 @@ public class Error   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

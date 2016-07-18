@@ -1,28 +1,30 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class UserObj   {
   
+  @SerializedName("username")
   private String username = null;
+
+  @SerializedName("password")
   private String password = null;
+
+  @SerializedName("role")
   private String role = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("username")
   public String getUsername() {
     return username;
   }
@@ -30,12 +32,9 @@ public class UserObj   {
     this.username = username;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("password")
   public String getPassword() {
     return password;
   }
@@ -43,12 +42,9 @@ public class UserObj   {
     this.password = password;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("role")
   public String getRole() {
     return role;
   }
@@ -56,7 +52,6 @@ public class UserObj   {
     this.role = role;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -100,4 +95,3 @@ public class UserObj   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

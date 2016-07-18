@@ -1,33 +1,42 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Node;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class Sku   {
   
+  @SerializedName("id")
   private String id = null;
+
+  @SerializedName("name")
   private String name = null;
+
+  @SerializedName("rules")
   private Object rules = null;
+
+  @SerializedName("nodes")
   private List<Node> nodes = new ArrayList<Node>();
+
+  @SerializedName("discoveryGraphName")
   private String discoveryGraphName = null;
+
+  @SerializedName("discoveryGraphOptions")
   private Object discoveryGraphOptions = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("id")
   public String getId() {
     return id;
   }
@@ -35,12 +44,9 @@ public class Sku   {
     this.id = id;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("name")
   public String getName() {
     return name;
   }
@@ -48,12 +54,9 @@ public class Sku   {
     this.name = name;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("rules")
   public Object getRules() {
     return rules;
   }
@@ -61,12 +64,9 @@ public class Sku   {
     this.rules = rules;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("nodes")
   public List<Node> getNodes() {
     return nodes;
   }
@@ -74,12 +74,9 @@ public class Sku   {
     this.nodes = nodes;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("discoveryGraphName")
   public String getDiscoveryGraphName() {
     return discoveryGraphName;
   }
@@ -87,12 +84,9 @@ public class Sku   {
     this.discoveryGraphName = discoveryGraphName;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("discoveryGraphOptions")
   public Object getDiscoveryGraphOptions() {
     return discoveryGraphOptions;
   }
@@ -100,7 +94,6 @@ public class Sku   {
     this.discoveryGraphOptions = discoveryGraphOptions;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -150,4 +143,3 @@ public class Sku   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

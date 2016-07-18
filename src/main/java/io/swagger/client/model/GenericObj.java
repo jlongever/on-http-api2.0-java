@@ -2,14 +2,13 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class GenericObj   {
-  
-
   
 
   @Override
@@ -49,4 +48,3 @@ public class GenericObj   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

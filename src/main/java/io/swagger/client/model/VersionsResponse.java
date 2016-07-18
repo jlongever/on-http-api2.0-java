@@ -1,26 +1,24 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class VersionsResponse   {
   
+  @SerializedName("message")
   private String message = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty("message")
   public String getMessage() {
     return message;
   }
@@ -28,7 +26,6 @@ public class VersionsResponse   {
     this.message = message;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -68,4 +65,3 @@ public class VersionsResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

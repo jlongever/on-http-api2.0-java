@@ -1,32 +1,40 @@
 package io.swagger.client.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Node;
 
+import com.google.gson.annotations.SerializedName;
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-05T13:18:18.953-04:00")
+@ApiModel(description = "")
 public class Graphobject   {
   
+  @SerializedName("id")
   private String id = null;
+
+  @SerializedName("instanceid")
   private String instanceid = null;
+
+  @SerializedName("context")
   private Object context = null;
+
+  @SerializedName("definition")
   private Object definition = null;
+
+  @SerializedName("tasks")
   private Object tasks = null;
+
+  @SerializedName("node")
   private Node node = null;
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("id")
   public String getId() {
     return id;
   }
@@ -34,12 +42,9 @@ public class Graphobject   {
     this.id = id;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("instanceid")
   public String getInstanceid() {
     return instanceid;
   }
@@ -47,12 +52,9 @@ public class Graphobject   {
     this.instanceid = instanceid;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("context")
   public Object getContext() {
     return context;
   }
@@ -60,12 +62,9 @@ public class Graphobject   {
     this.context = context;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("definition")
   public Object getDefinition() {
     return definition;
   }
@@ -73,12 +72,9 @@ public class Graphobject   {
     this.definition = definition;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("tasks")
   public Object getTasks() {
     return tasks;
   }
@@ -86,12 +82,9 @@ public class Graphobject   {
     this.tasks = tasks;
   }
 
-  
   /**
    **/
-  
   @ApiModelProperty(value = "")
-  @JsonProperty("node")
   public Node getNode() {
     return node;
   }
@@ -99,7 +92,6 @@ public class Graphobject   {
     this.node = node;
   }
 
-  
 
   @Override
   public boolean equals(Object o) {
@@ -149,4 +141,3 @@ public class Graphobject   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
